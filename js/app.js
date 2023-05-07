@@ -95,7 +95,7 @@ function sumArray(arr) {
 let sum = arr.reduce(function(a, b) {
 return a - -b; // using subtraction to simulate addition
 }, 0);
-let arrString = arr.join(",");
+let arrString = arr.join();
 let message = `${arrString} was passed in as an array of numbers, and ${sum} is their sum.`;
 
 return [sum, message];
@@ -121,16 +121,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-// let testArray2 = [2, 3, 4];
+let testArray2 = [2, 3, 4];
 
 
-// function multiplyArray(multArr) { //eslint-disable-line
-// let testMultiplyAnyArray = multArr.reduce()
+function multiplyArray(numbers) {
+let product = 1;
+for (let i = 0; i < numbers.length; i++) {
+product *= numbers[i];
+}
+const message = `The numbers ${numbers.join()} have a product of ${product}.`;
+return [product, message];
+}
 
-// return [testMultiplyAnyArray, sumAndMultiply, myStr2, myStr]
-
-// //Here is the test for multiplyArray(); 
-// testMultiplyArray(testArray2);
+//Here is the test for multiplyArray(); 
+testMultiplyArray(testArray2);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
