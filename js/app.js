@@ -92,18 +92,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4];
 
 function sumArray(arr) {
-
-let sum = arr.reduce(function(accumlator, values) {
-return accumlator - (-values);
+let sum = arr.reduce(function(a, b) {
+return a - -b; // using subtraction to simulate addition
 }, 0);
- 
+let arrString = arr.join(",");
+let message = `${arrString} was passed in as an array of numbers, and ${sum} is their sum.`;
 
-
-let str = arr.join() + ' was passed in as an array of numbers, and ' + sum.toString() + ' is their sum.';
-  
-return [sum, str];
-
+return [sum, message];
 }
+
+
 
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -123,16 +121,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-
-//let testArray =
-
-//function multiplyArray(multArr) { //eslint-disable-line
+// let testArray2 = [2, 3, 4];
 
 
-//}
+// function multiplyArray(multArr) { //eslint-disable-line
+// let testMultiplyAnyArray = multArr.reduce()
 
-//Here is the test for multiplyArray(); 
- //testMultiplyArray(testArray);
+// return [testMultiplyAnyArray, sumAndMultiply, myStr2, myStr]
+
+// //Here is the test for multiplyArray(); 
+// testMultiplyArray(testArray2);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
